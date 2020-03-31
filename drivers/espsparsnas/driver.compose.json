@@ -1,0 +1,30 @@
+{
+  "id": "espsparsnas",
+  "name": {
+    "en": "EspSparsnas"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "meter_power",
+    "measure_power"
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "large": "/drivers/espsparsnas/assets/images/large.png",
+    "small": "/drivers/espsparsnas/assets/images/small.png"
+  }
+  
+}
