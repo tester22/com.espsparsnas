@@ -36,6 +36,7 @@
         "measure_power"
       ],
       "energy": {
+        "cumulative": true,
         "batteries": [
           "AAA",
           "AAA"
