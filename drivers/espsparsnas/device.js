@@ -27,14 +27,14 @@ class EspSparsnasDevice extends Homey.Device {
 	}
 
 	onMessage(topic, message) {
-		this.setCapabilityValue('measure_battery', message.battery);
-		this.setCapabilityValue('meter_power', message.total);
-		this.setCapabilityValue('measure_power', message.watt);
-		if (this.getCapabilityValue('meter_power.peak' < message.total)) {
-			this.setCapabilityValue('meter_power.peak', message.total);
+		this.setCapabilityValue('measure_battery', Math.round(message.battery));
+		this.setCapabilityValue('meter_power', Math.round(message.total));
+		this.setCapabilityValue('measure_power', Math.round(message.watt));
+		if (this.getCapabilityValue('meter_power.peak' < Math.round(message.total))) {
+			this.setCapabilityValue('meter_power.peak', Math.round(message.total));
 		}
-		if (this.getCapabilityValue('measure_power.peak' < message.watt)) {
-			this.setCapabilityValue('measure_power.peak', message.watt);
+		if (this.getCapabilityValue('measure_power.peak' < Math.round(message.watt))) {
+			this.setCapabilityValue('measure_power.peak', Math.round(message.watt));
 
 		}
 
