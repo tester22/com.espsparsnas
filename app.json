@@ -38,8 +38,8 @@
       "energy": {
         "cumulative": true,
         "batteries": [
-          "AAA",
-          "AAA"
+          "AA",
+          "AA"
         ]
       },
       "pair": [
